@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Infrastructure.Identity.Migrations
+namespace Infrastructure.Data.Migrations
 {
-    public partial class tarihHesap : Migration
+    public partial class ilk : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -139,6 +139,7 @@ namespace Infrastructure.Identity.Migrations
                     Gender = table.Column<int>(type: "int", nullable: true),
                     IsUpdate = table.Column<bool>(type: "bit", nullable: false),
                     AdvanceSpent = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    FirstAdvanceDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
